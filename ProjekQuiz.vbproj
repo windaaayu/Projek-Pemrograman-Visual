@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1542ED33-27B4-428D-B7E2-1ED0566455C6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProjekQuiz.My.MyApplication</StartupObject>
+    <RootNamespace>ProjekQuiz</RootNamespace>
+    <AssemblyName>ProjekQuiz</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProjekQuiz.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProjekQuiz.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.32.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.32.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.5.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.5.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.8.6.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.6\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasisData.Designer.vb">
+      <DependentUpon>BasisData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BasisData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasil.Designer.vb">
+      <DependentUpon>Hasil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hasil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KelolaSoal.Designer.vb">
+      <DependentUpon>KelolaSoal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KelolaSoal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="koneksi.vb" />
+    <Compile Include="ManagementUser.Designer.vb">
+      <DependentUpon>ManagementUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.Designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGlobal.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PBO.Designer.vb">
+      <DependentUpon>PBO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PBO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PemrogramanDasar.Designer.vb">
+      <DependentUpon>PemrogramanDasar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PemrogramanDasar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil.Designer.vb">
+      <DependentUpon>Profil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.vb">
+      <DependentUpon>SignIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.vb">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahSoal.Designer.vb">
+      <DependentUpon>TambahSoal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahSoal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasisData.resx">
+      <DependentUpon>BasisData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasil.resx">
+      <DependentUpon>Hasil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KelolaSoal.resx">
+      <DependentUpon>KelolaSoal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementUser.resx">
+      <DependentUpon>ManagementUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBO.resx">
+      <DependentUpon>PBO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PemrogramanDasar.resx">
+      <DependentUpon>PemrogramanDasar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil.resx">
+      <DependentUpon>Profil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahSoal.resx">
+      <DependentUpon>TambahSoal.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ad2df776-1c6f-4271-be64-c3cc9b71d1c9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desain tanpa judul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-c++-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-e-learning-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-laptop-settings-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-log-out-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-terminal-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-thin-client-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-website-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programming_18813470.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo vocanetic %283%29%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo vocanetic %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo vocanetic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Oct 22, 2025, 04_53_34 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-website-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-static-view-level2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-python-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-quiz-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-history-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-history-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-24%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oct 31, 2025, 06_46_06 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-userr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-userRR.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
